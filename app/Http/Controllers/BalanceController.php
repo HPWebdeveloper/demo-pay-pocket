@@ -20,7 +20,7 @@ class BalanceController extends Controller
 
 
         // dd($user->getWalletBalanceByType('wallet_10'));
-        $amount = 1000; // Define or get this value as needed
+        $amount = 1000; // Assign or configure this value for each individual request.
 
         $type = $request->type;
 

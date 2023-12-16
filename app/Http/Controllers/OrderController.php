@@ -18,7 +18,7 @@ class OrderController extends Controller
     {
 
         $user = auth()->user();
-        $orderValue = 100;
+        $orderValue = 100; // Assign or configure this value for each individual request.
 
         try {
             LaravelPayPocket::pay($user, $orderValue);
