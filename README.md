@@ -2,6 +2,9 @@
 
 This project serves as a demonstration to evaluate the capabilities of the [laravel-pay-pocket](https://github.com/HPWebdeveloper/laravel-pay-pocket) package.
 
+## PHP version
+
+This project requires PHP version 8.1 or higher.
 
 ## Installation
 
@@ -33,3 +36,14 @@ php artisan key:generate
 npm install
 npm run dev
 ```
+
+#### Serve Laravel app
+
+
+```bash
+php artisan serve
+```
+
+Register a user here: http://127.0.0.1:8000/register
+
+Deposit and pay here: http://127.0.0.1:8000/home
