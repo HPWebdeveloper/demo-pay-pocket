@@ -1,4 +1,4 @@
-# Demo of Laravel Pay Pocket
+# Laravel Pay Pocket Demonstration
 
 This project serves as a demonstration to evaluate the capabilities of the [laravel-pay-pocket](https://github.com/HPWebdeveloper/laravel-pay-pocket) package.
 
