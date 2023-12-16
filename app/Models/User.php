@@ -3,23 +3,20 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use HPWebdeveloper\LaravelPayPocket\Traits\HandlesDeposit;
+use HPWebdeveloper\LaravelPayPocket\Traits\HandlesPayment;
+use HPWebdeveloper\LaravelPayPocket\Traits\HasWallet;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-use HPWebdeveloper\LaravelPayPocket\Traits\HasWallet;
-use HPWebdeveloper\LaravelPayPocket\Traits\HandlesDeposit;
-use HPWebdeveloper\LaravelPayPocket\Traits\HandlesPayment;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable;
-
-
-    use HasWallet;
     use HandlesDeposit;
     use HandlesPayment;
-
+    use HasApiTokens, HasFactory, Notifiable;
+    use HasWallet;
 
     /**
      * The attributes that are mass assignable.

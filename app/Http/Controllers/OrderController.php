@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\User;
-use HPWebdeveloper\LaravelPayPocket\Traits\GetWallets;
-use HPWebdeveloper\LaravelPayPocket\Facades\LaravelPayPocket;
 use HPWebdeveloper\LaravelPayPocket\Exceptions\InsufficientBalanceException;
+use HPWebdeveloper\LaravelPayPocket\Facades\LaravelPayPocket;
+use HPWebdeveloper\LaravelPayPocket\Traits\GetWallets;
+use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
@@ -22,6 +21,7 @@ class OrderController extends Controller
 
         try {
             LaravelPayPocket::pay($user, $orderValue);
+
             return redirect()->route('home')->with('status', 'Order paid successfully.');
         } catch (InsufficientBalanceException $e) {
             // Handle specific InsufficientBalanceException
