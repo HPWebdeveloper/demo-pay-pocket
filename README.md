@@ -34,7 +34,7 @@ php artisan key:generate
 
 ```bash
 npm install
-npm run dev
+npm run dev or npm run build
 ```
 
 #### Serve Laravel app
